@@ -32,7 +32,7 @@ const Services = () => {
                 <h1 className='text-primary font-bold'>Our services</h1>
                 <h2 className='text-3xl'>Services We Provide</h2>
             </div>
-            <div className='grid lg:grid-cols-3 grid-cols-1 gap-6 lg:w-full lg:mx-auto lg:ml-6'>
+            <div className='grid lg:grid-cols-3 grid-cols-1 gap-6 lg:w-full lg:mx-auto lg:ml-8'>
                 {
                     serviceData.map(card => <ServiceCard
                         key={card.id}
