@@ -11,7 +11,7 @@ const Banner = () => {
                 <div className=''>
                     <h1 className="text-5xl font-bold">Your New Smile Starts Here</h1>
                     <p className="py-6">Lorem Ipsum is simply dummy text of the printing and typesetting <br /> industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
-                    <button className="btn btn-primary">Get Started</button>
+                    <button className="btn btn-primary bg-gradient-to-r from-primary to-secondary">Get Started</button>
                 </div>
             </div>
         </div>
