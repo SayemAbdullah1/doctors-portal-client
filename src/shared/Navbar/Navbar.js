@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const menuItem = <>
-        <li><Link to='/home'>Home</Link></li>
+        <li><Link to='/'>Home</Link></li>
         <li><Link to='/appointment'>Appointment</Link></li>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/login'>Login</Link></li>
@@ -20,16 +20,14 @@ const Navbar = () => {
                         
                     </ul>
                 </div>
-                <a className="btn btn-ghost normal-case text-xl">Doctors portal</a>
+                <Link to='/' className="btn btn-ghost normal-case text-xl">Doctors portal</Link>
             </div>
-            <div className="navbar-center hidden lg:flex">
+            <div className="navbar-center hidden lg:flex navbar-end">
                 <ul className="menu menu-horizontal px-1">
                    {menuItem}
                 </ul>
             </div>
-            <div className="navbar-end">
-                <a className="btn">Get started</a>
-            </div>
+           
         </div>
     );
 };
