@@ -6,7 +6,9 @@ const AvailableAppointments = ({ selected }) => {
         <div>
             <h2 className='text-secondary font-bold text-center mb-12'>Available appointments on date {format(selected, 'PP')}</h2>
             <div>
-                <AppointmentOptions></AppointmentOptions>
+                <AppointmentOptions
+                selected={selected}
+                ></AppointmentOptions>
             </div>
         </div>
     );
