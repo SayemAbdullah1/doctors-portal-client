@@ -5,12 +5,12 @@ import PrimaryButton from '../../../Components/PrimaryButton/PrimaryButton';
 
 const Appointment = () => {
     return (
-        <section className='mt-48' style={{
+        <section className='mt-48 ' style={{
             background: `url(${appointment})`
         }}>
             
-            <div className="hero lg:max-w-6xl lg:mx-auto mt-24">
-                <div className="hero-content flex-col lg:flex-row p-0">
+            <div className="hero lg:max-w-6xl lg:mx-auto mt-24 ">
+                <div className="hero-content flex-col lg:flex-row lg:p-0 py-12 px-4">
                     <img src={doctor} alt='' className=" hidden lg:block max-w-lg rounded-lg bottom-0 -mt-36 pb-0" />
                     <div className='lg:ml-12 bottom-0'>
                         <p className="text-primary font-bold">Appointment</p>
