@@ -26,6 +26,7 @@ const AppointmentOptions = ({ selected }) => {
                 <BookingModal
                     treatment={treatment}
                         selected={selected}
+                        setTreatment={setTreatment}
                     ></BookingModal>
             }
         </div>
