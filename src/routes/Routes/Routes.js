@@ -1,8 +1,10 @@
 import Main from "../../layout/Main";
 import Appointment from "../../pages/Appointment/Appointment/Appointment";
+import Dashboard from "../../pages/Dashboard/Dashboard/Dashboard";
 import Home from "../../pages/Home/Home/Home";
 import Login from "../../pages/Login/Login";
 import SignUp from "../../pages/SignUp/SignUp";
+import PrivateRoutes from "./PrivateRoutes/PrivateRoutes";
 
 const { createBrowserRouter } = require("react-router-dom");
 
@@ -28,6 +30,10 @@ const { createBrowserRouter } = require("react-router-dom");
                 element: <SignUp></SignUp>
             }
         ]
+    },
+    {
+        path: 'dashboard',
+        element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>
     }
    
 ])
