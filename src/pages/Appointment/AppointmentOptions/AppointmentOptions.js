@@ -1,15 +1,19 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useState } from 'react';
 import ApointmentOption from './ApointmentOption';
 import BookingModal from './BookingModal/BookingModal';
 
 const AppointmentOptions = ({ selected }) => {
-    const [appointmentOptions, setAppointmentOptions] = useState([])
+    // const [appointmentOptions, setAppointmentOptions] = useState([])
     const [treatment, setTreatment] = useState(null)
-    useEffect( ()=>{
-        fetch('http://localhost:5000/appointmentOptions')
+
+    const { data: appointmentOptions =[] } = useQuery({
+        queryKey: ['appointmentOprions'],
+        queryFn: () => fetch('http://localhost:5000/appointmentOptions')
         .then(res => res.json())
-        .then(data => setAppointmentOptions(data))
-    }, [])
+    })
+
+    
     return (
         <div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 '>
