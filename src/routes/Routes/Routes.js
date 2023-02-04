@@ -1,3 +1,4 @@
+import DashboardLayout from "../../layout/DashboardLayout";
 import Main from "../../layout/Main";
 import Appointment from "../../pages/Appointment/Appointment/Appointment";
 import Dashboard from "../../pages/Dashboard/Dashboard/Dashboard";
@@ -32,8 +33,14 @@ const { createBrowserRouter } = require("react-router-dom");
         ]
     },
     {
-        path: 'dashboard',
-        element: <PrivateRoutes><Dashboard></Dashboard></PrivateRoutes>
+        path: '/dashboard',
+        element: <PrivateRoutes><DashboardLayout></DashboardLayout></PrivateRoutes>,
+        children: [
+            {
+                path: '/dashboard',
+                element: <Dashboard></Dashboard>
+            }
+        ]
     }
    
 ])
