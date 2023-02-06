@@ -18,7 +18,7 @@ const DashboardLayout = () => {
                     <ul className="menu p-4 w-80 bg-base-100 text-base-content">
                         
                         <li><Link to='/dashboard'>My appointment</Link></li>
-                        <li><Link to='/users'>All users</Link></li>
+                        <li><Link to='/dashboard/users'>All users</Link></li>
                         
                     </ul>
 

@@ -43,7 +43,7 @@ const { createBrowserRouter } = require("react-router-dom");
                 element: <MyAppointment></MyAppointment>
             },
             {
-                path: '/users',
+                path: '/dashboard/users',
                 element: <AllUsers></AllUsers>
             }
         ]
