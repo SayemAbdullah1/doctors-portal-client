@@ -11,6 +11,17 @@ const AllUsers = () => {
         return data
         }
     })
+
+    const handleMakeAdmin= id =>{
+        fetch(`http://localhost:5000/users/admin/${id}`, {
+            method: 'PUT'
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+
+    }
     return (
         <div>
             <div className="text-3xl">All users</div>
@@ -35,7 +46,7 @@ const AllUsers = () => {
                                     <th>{i + 1}</th>
                                     <td>{user.name}</td>
                                     <td>{user.email}</td>
-                                    <td><button className='btn btn-xs btn-primary'>Make admin</button></td>
+                                    <td><button onClick={()=> handleMakeAdmin(user._id)} className='btn btn-xs btn-primary'>Make admin</button></td>
                                     <td><button className='btn btn-xs bg-red-600'>Delete</button></td>
                                     
 
