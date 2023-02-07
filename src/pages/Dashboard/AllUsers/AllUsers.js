@@ -35,8 +35,9 @@ const AllUsers = () => {
                                     <th>{i + 1}</th>
                                     <td>{user.name}</td>
                                     <td>{user.email}</td>
-                                    <td>update</td>
-                                    <td>delete</td>
+                                    <td><button className='btn btn-xs btn-primary'>Make admin</button></td>
+                                    <td><button className='btn btn-xs bg-red-600'>Delete</button></td>
+                                    
 
                                 </tr>
                             )
